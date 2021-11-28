@@ -3,63 +3,63 @@
 """ Vim-Plug
 call plug#begin()
 
-" Aesthetics - Main
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'bryanmylee/vim-colorscheme-icons'
-Plug 'mhinz/vim-startify'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'junegunn/seoul256.vim'
-Plug 'junegunn/vim-journal'
-Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'nightsense/forgotten'
-Plug 'zaki/zazen'
+    " Aesthetics - Main
+    Plug 'dracula/vim', { 'as': 'dracula' }
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'bryanmylee/vim-colorscheme-icons'
+    Plug 'mhinz/vim-startify'
+    Plug 'junegunn/goyo.vim'
+    Plug 'junegunn/limelight.vim'
+    Plug 'junegunn/seoul256.vim'
+    Plug 'junegunn/vim-journal'
+    Plug 'junegunn/rainbow_parentheses.vim'
+    Plug 'nightsense/forgotten'
+    Plug 'zaki/zazen'
 
-" Aethetics - Additional
-Plug 'nightsense/nemo'
-Plug 'yuttie/hydrangea-vim'
-Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
-Plug 'rhysd/vim-color-spring-night'
+    " Aethetics - Additional
+    Plug 'nightsense/nemo'
+    Plug 'yuttie/hydrangea-vim'
+    Plug 'chriskempson/tomorrow-theme', { 'rtp': 'vim' }
+    Plug 'rhysd/vim-color-spring-night'
 
-" Functionalities
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-surround'
-Plug 'majutsushi/tagbar'
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ryanoasis/vim-devicons'
-Plug 'scrooloose/nerdcommenter'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mhinz/vim-signify'
-Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/vim-easy-align'
-Plug 'alvan/vim-closetag'
-Plug 'tpope/vim-abolish'
-Plug 'Yggdroot/indentLine'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'chrisbra/Colorizer'
-Plug 'KabbAmine/vCoolor.vim'
-Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
-Plug 'vim-scripts/loremipsum'
-Plug 'metakirby5/codi.vim'
-Plug 'dkarter/bullets.vim'
-Plug 'psliwka/vim-smoothie'
-Plug 'antoinemadec/FixCursorHold.nvim'
-Plug 'wellle/context.vim'
+    " Functionalities
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-sensible'
+    Plug 'tpope/vim-surround'
+    Plug 'majutsushi/tagbar'
+    Plug 'preservim/nerdtree'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'scrooloose/nerdcommenter'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'mhinz/vim-signify'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'junegunn/vim-easy-align'
+    Plug 'alvan/vim-closetag'
+    Plug 'tpope/vim-abolish'
+    Plug 'Yggdroot/indentLine'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'sheerun/vim-polyglot'
+    Plug 'chrisbra/Colorizer'
+    Plug 'KabbAmine/vCoolor.vim'
+    Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
+    Plug 'vim-scripts/loremipsum'
+    Plug 'metakirby5/codi.vim'
+    Plug 'dkarter/bullets.vim'
+    Plug 'psliwka/vim-smoothie'
+    Plug 'antoinemadec/FixCursorHold.nvim'
+    Plug 'wellle/context.vim'
 
-" Entertainment
-Plug 'dansomething/vim-hackernews'
+    " Entertainment
+    Plug 'dansomething/vim-hackernews'
 
 call plug#end()
 
 """ Main Configurations
 filetype plugin indent on
-set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent
 set incsearch ignorecase smartcase hlsearch
 set wildmode=longest,list,full wildmenu
 set ruler laststatus=2 showcmd showmode
@@ -359,6 +359,10 @@ nmap <leader>j :set filetype=journal<CR>
 nmap <leader>k :ColorToggle<CR>
 nmap <leader>l :Limelight!!<CR>
 xmap <leader>l :Limelight!!<CR>
+nmap <leader>gs :Git<CR>
+nmap <leader>gb :Git blame<CR>
+nmap <leader>gd :Git difftool<CR>
+nmap <leader>gm :Git mergetool<CR>
 autocmd FileType python nmap <leader>x :0,$!~/.config/nvim/env/bin/python -m yapf<CR>
 nmap <silent> <leader><leader> :noh<CR>
 nmap <Tab> :bnext<CR>
